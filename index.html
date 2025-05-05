@@ -3,47 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Вік улюбленця</title>
+  <title>Вік мого улюбленця</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1 data-text="title">Скільки років вашому улюбленцю в людських роках?</h1>
-    <div class="controls">
-      <label class="switch">
-        <input type="checkbox" id="themeToggle" />
-        <span class="slider"></span>
-      </label>
-      <button onclick="toggleLanguage()" id="langToggle">EN</button>
-    </div>
+    <h1>Скільки років вашому котику чи песику в людських роках?</h1>
   </header>
+
   <main>
     <div class="converter">
-      <label for="animal" data-text="animalLabel">Оберіть тваринку:</label>
+      <label for="animal">Оберіть тваринку:</label>
       <select id="animal">
-        <option value="cat" data-text="cat">Кіт</option>
-        <option value="dog" data-text="dog">Пес</option>
+        <option value="cat">Кіт</option>
+        <option value="dog">Пес</option>
       </select>
-      <label for="mode" data-text="modeLabel">Спосіб введення віку:</label>
-      <select id="mode" onchange="toggleInputMode()">
-        <option value="age" data-text="byAge">Вік у роках</option>
-        <option value="dob" data-text="byDob">Дата народження</option>
-      </select>
-      <div id="ageInput">
-        <label for="age" data-text="ageLabel">Вік тваринки (роки):</label>
-        <input type="number" id="age" min="0" placeholder="Наприклад: 3" />
-      </div>
-      <div id="dobInput" style="display: none;">
-        <label for="dob" data-text="dobLabel">Дата народження:</label>
-        <input type="date" id="dob" />
-      </div>
-      <button onclick="convertAge()" data-text="convertBtn">Конвертувати</button>
+
+      <label for="age">Вік тваринки (роки):</label>
+      <input type="number" id="age" min="0" placeholder="Наприклад: 3" />
+
+      <button onclick="convertAge()">Конвертувати</button>
+
       <div id="result"></div>
     </div>
   </main>
+
   <footer>
-    <p>© 2025</p>
+    <p>© 2025 Мій улюбленець</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
